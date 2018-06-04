@@ -1,28 +1,21 @@
-# rebekka
-Rebekka - an FTP/FTPS client in Swift. Utilizes `CFFTPStream` API from `CFNetworking`.
+# SwiftyFTP
+![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat)
+![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat)
 
-###Implemented FTP commands
+Simple Linux version of "[Rebekka](https://github.com/Constantine-Fry/rebekka) - an FTP/FTPS client in Swift. Utilizes `CFFTPStream` API from `CFNetworking`."
+
+## Implemented FTP commands
 
 + Directory content listing.
 + Directory creation.
 + File upload/download.
 
-###Installation
+## Installation
+Include the following to your `Package.swift` file:
+	
+	.package(url: "https://github.com/alexsteinerde/SwiftyFTP.git", from: "1.0.0")
 
-#####As Embedded framework (iOS 8.0+)
-
-1. Add Rebekka as a submodule.
-	`git submodule add git@github.com:Constantine-Fry/rebekka.git`
-2. Drag-and-drop `Rebekka.xcodeproj` into your project. The project has two targets: Rebekka.framework for OSX project, RebekkaTouch.framework for iOS projects. 
-3. Add new target in "Build Phases" -> "Target Dependencies".
-4. Click the `+` button at the top left of the panel and choose "New copy files phase".
-  * Rename the new phase to "Copy Frameworks".
-  * Set the "Destination" to "Frameworks".
-5. Add Rebekka framework to this phase.
-
-To support iOS 7.0, you can add source code files directly into your project .
-
-###Usage
+## Usage
 
 ```swift
 var configuration = SessionConfiguration()
@@ -59,13 +52,12 @@ if let URL = NSBundle.mainBundle().URLForResource("testUpload", withExtension: "
 }
 ```
 
-###Requirements
+## Requirements
 
-Swift 2.0 / iOS 8.0+ / Mac OS X 10.9+
+macOS & Linux: `Swift 4.0.3` or `Swift 4.1`
 
 ###License
 
-The BSD 2-Clause License. See License.txt for details.
+rebekka is licences under the BSD 2-Clause License ([See License.txt for details.](https://github.com/Constantine-Fry/rebekka/blob/master/License.txt)).
 
-===========
-Bonn, December 2015.
+This library is licenced under MIT (see LICENSE file for details).
